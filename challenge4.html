@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    function upDate(previewPic){
+      var alt = previewPic.getAttribute("alt");
+      var src = previewPic.getAttribute("src");
+
+      document.querySelector('#image').style.backgroundImage = "url('" + src + "')";
+      document.querySelector('#image').innerHTML = alt;
+ /* In this function you should
+    1) change the url for the background image of the div with the id = "image"
+    to the source file of the preview image
+
+    2) Change the text  of the div with the id = "image"
+    to the alt text of the preview image
+    */
+
+	}
+
+	  function unDo(){
+
+      undo = document.querySelector("#image");
+      undo.style.backgroundImage = "url('')";
+      document.querySelector('#image').innerHTML = "Hover over an image below to display here";
+     /* In this function you should
+    1) Update the url for the background image of the div with the id = "image"
+    back to the orginal-image.  You can use the css code to see what that original URL was
+
+    2) Change the text  of the div with the id = "image"
+    back to the original text.  You can use the html code to see what that original text was
+    */
+
+	}
+    // I used Two functions here.  Starter idea at:
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex="3"
+            alt = "I love Mickey"
+            src = "https://youaskalotofquestions.files.wordpress.com/2015/03/mickey-mouse-image-hd-disney.jpg"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()">
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex="2"
+            alt = "Let it Go"
+            src = "https://media-assets-01.thedrum.com/cache/images/thedrum-prod/public-news-tmp-10557-frozen--default--300.jpg"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()">
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex="1"
+            src = "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-tangled-mandy-moore.jpg"
+            alt = "I've got a dream"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()">
+
+        <img class = "preview" tabindex="1"
+            src = "https://vignette.wikia.nocookie.net/moviedatabase/images/a/ac/Princess_Jasmine_001.jpg/revision/latest?cb=20140131174334"
+            alt = "A whole new world"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()">
+
+        <img class = "preview" tabindex="1"
+            src = "http://www.cartoonswallpapers.net/wallpapers/belle-beauty-beast-image-android.jpg"
+            alt = "Be our guest"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()">
+
+        <img class = "preview" tabindex="1"
+            src = "http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20161011/180373d287301967684a0c.jpg"
+            alt = "I'll make a man out of you"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()">
+
+</body>
+</html>
